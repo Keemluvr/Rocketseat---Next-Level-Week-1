@@ -1,9 +1,8 @@
 # Ecoleta
 
-
 <p align="center">
   <a href="" rel="noopener">
- <img width=250px height=110px src="./web-react/src/assets/logo.png" alt="Project logo"></a>
+ <img width=170px height=40px src="https://github.com/Keemluvr/ecoleta/blob/master/web-react/src/assets/Logo.png" alt="Project logo"></a>
 </p>
 
 <h2 align="center">Next Level Week 1.0 | RocketSeat</h2>
