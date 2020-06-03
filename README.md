@@ -3,7 +3,14 @@
  <img width=170px height=40px src="https://github.com/Keemluvr/ecoleta/blob/master/web-react/src/assets/Logo.png" alt="Project logo"></a>
 </p>
 
-<h2 align="center">Next Level Week 1.0 | RocketSeat</h2>
+<p align="center">
+  <a href="https://rocketseat.com.br">
+    <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%237519C1">
+  </a>
+  <a href="https://rocketseat.com.br">
+    <img alt="Made by Rocketseat" src="https://img.shields.io/badge/NLW-1.0-blueviolet">
+  </a>
+</p>
 
 ## 📝 About <a name = "about"></a>
 
