@@ -5,34 +5,34 @@
 
 <h2 align="center">Next Level Week 1.0 | RocketSeat</h2>
 
-## 📝 Sobre <a name = "about"></a>
+## 📝 About <a name = "about"></a>
 
-Ecoleta possui o objetivo de conectar empresas ou entidades que coletam resíduos as pessoas que precisam descartar esses resíduos.
+Ecoleta aims to connect companies or entities that collect waste to people who need to dispose of this waste.
 
-## 🏁 Instalando <a name = "getting_started"></a>
+## 🏁 Installing <a name = "getting_started"></a>
 
-Baixe o projeto
+download the project
 ```
 git clone https://github.com/Keemluvr/ecoleta.git
 ```
 
-instale as dependências do back-end e do front-end com o seguinte comando
+install the back-end and front-end dependencies
 ```
 npm install
 ```
 
-Entre na pasta do backend e do frontend e execute-os
+Run the backend and frontend
 ```
 npm start
 ```
 
-## 🚀 Visualizar <a name = "deployment"></a>
+## 🚀 Preview <a name = "deployment"></a>
 
-🖥 Protótipo                       | 💻 Frontend                          | 🗃 Backend
+🖥 Prototype                       | 💻 Frontend                           | 🗃 Backend
 ---------------------------------- | -------------------------------------- | -----------------------------------------
 [Figma](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta?node-id=136%3A548)   | [Netlify - em progresso](#)     | [Heroku - em progresso](#)
 
-## ⛏️ Construído com <a name = "built_using"></a>
+## ⛏️ Built using <a name = "built_using"></a>
 
 🗃 Backend                            | 💻 Frontend                               | 📱 Mobile
 ------------------------------------- | -------------------------------------- | -----------------------------------------
