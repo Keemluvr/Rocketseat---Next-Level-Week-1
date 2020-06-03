@@ -47,5 +47,23 @@ export default class PointsController {
             ...point
         })
     }
-    
+
+    /**
+     * Lista um ponto específico de coleta
+     */
+    async show (req: Request, res: Response) {
+        const { id } = req.params
+        // Busca do id  no banco de dados
+        const point = await knex('points').where('id', id).first()
+        // Caso o id nãos eja encontrado, retorna um erro
+        if(!point) return res.status(400).json({ message: 'Point not found.'})
+        // Retorna o nome dos itens através do seu id
+        const items = await knex('items')
+            .join('point_items', 'items.id', '=', 'point_items.item_id')
+            .where('point_items.point_id', id)
+            .select('items.title')
+
+        return res.json({ point, items })
+    }
+
 }
