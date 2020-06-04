@@ -38,6 +38,23 @@
                         <h2>Endereço</h2>
                         <span>Selecione o endereço no mapa</span>
                     </legend>
+
+                    <l-map
+                      v-if="showMap"
+                      :zoom="zoom"
+                      :center="center"
+                      :options="mapOptions"
+                      @update:center="centerUpdate"
+                      @update:zoom="zoomUpdate"
+                    >
+                      <l-tile-layer
+                        :url="url"
+                        :attribution="attribution"
+                      />
+                      <l-marker :lat-lng="withPopup">
+                      </l-marker>
+                    </l-map>
+
                     <div class="field-group">
                         <div class="field">
                             <label for="uf">Estado (uf)</label>
@@ -96,16 +113,66 @@
 
 <script>
 import { ArrowLeftIcon } from 'vue-feather-icons'
+import L from 'leaflet'
+import { latLng } from "leaflet"
+import { LMap, LTileLayer, LMarker } from "vue2-leaflet"
+
 
 export default {
   name: 'CreatePoint',
+  data() {
+    return {
+      zoom: 13,
+      center: latLng(47.41322, -1.219482),
+      url: 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+      attribution:
+        '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+      withPopup: latLng(47.41322, -1.219482),
+      currentZoom: 11.5,
+      currentCenter: latLng(47.41322, -1.219482),
+      showParagraph: false,
+      mapOptions: {
+        zoomSnap: 0.5
+      },
+      showMap: true
+    };
+  },
   components: {
-    ArrowLeftIcon
-  }
+    ArrowLeftIcon,
+    LMap,
+    LTileLayer,
+    LMarker
+  },
+  methods: {
+    zoomUpdate(zoom) {
+      this.currentZoom = zoom
+    },
+    centerUpdate(center) {
+      this.currentCenter = center
+    },
+    innerClick() {
+      alert("Click!")
+    }
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.$refs.myMap.mapObject.ANY_LEAFLET_MAP_METHOD()
+    });
+
+    delete L.Icon.Default.prototype._getIconUrl
+
+    L.Icon.Default.mergeOptions({
+      iconRetinaUrl: require('leaflet/dist/images/marker-icon-2x.png'),
+      iconUrl: require('leaflet/dist/images/marker-icon.png'),
+      shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
+    })
+  },
 }
 </script>
 
 <style>
+  @import "https://unpkg.com/leaflet@1.6.0/dist/leaflet.css";
+
   #page-create-point {
     width: 100%;
     max-width: 1100px;
