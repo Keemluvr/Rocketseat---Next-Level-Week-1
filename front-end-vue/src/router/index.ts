@@ -1,14 +1,22 @@
 import Vue from 'vue'
 import VueRouter, { RouteConfig } from 'vue-router'
+
+// Páginas
 import Home from '../views/Home.vue'
+import CreatePoint from '../views/CreatePoint.vue'
 
 Vue.use(VueRouter)
 
   const routes: Array<RouteConfig> = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home
+  },
+  {
+    path: '/create-point',
+    name: 'create-point',
+    component: CreatePoint
   }
 ]
 

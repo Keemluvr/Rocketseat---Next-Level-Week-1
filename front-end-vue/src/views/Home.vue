@@ -8,12 +8,12 @@
         <h1>Seu marketplace de coleta de resíduos.</h1>
         <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>
 
-        <a href="/cadastro">
+        <router-link :to="{name: 'create-point'}">
           <span>
             <log-in-icon size="1.5x" class="custom-class"></log-in-icon>
           </span>
           <strong>Cadastre um ponto de coleta</strong>
-        </a>
+        </router-link>
       </main>
     </div>
   </div>
