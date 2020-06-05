@@ -77,29 +77,9 @@
                         <span>Selecione um ou mais itens abaixo</span>
                     </legend>
                     <ul class="items-grid">
-                        <li>
-                            <img src="http://localhost:3334/uploads/oleo.svg" alt="Teste"/>
-                            <span>Óleo de cozinha</span>
-                        </li>
-                        <li>
-                            <img src="http://localhost:3334/uploads/oleo.svg" alt="Teste"/>
-                            <span>Óleo de cozinha</span>
-                        </li>
-                        <li>
-                            <img src="http://localhost:3334/uploads/oleo.svg" alt="Teste"/>
-                            <span>Óleo de cozinha</span>
-                        </li>
-                        <li>
-                            <img src="http://localhost:3334/uploads/oleo.svg" alt="Teste"/>
-                            <span>Óleo de cozinha</span>
-                        </li>
-                        <li>
-                            <img src="http://localhost:3334/uploads/oleo.svg" alt="Teste"/>
-                            <span>Óleo de cozinha</span>
-                        </li>
-                        <li>
-                            <img src="http://localhost:3334/uploads/oleo.svg" alt="Teste"/>
-                            <span>Óleo de cozinha</span>
+                        <li v-for="{ id, image_url, name } in items" :key="id">
+                            <img :src="image_url" :alt="name"/>
+                            <span>{{ name }}</span>
                         </li>
                     </ul>
                 </fieldset>
@@ -116,7 +96,7 @@ import { ArrowLeftIcon } from 'vue-feather-icons'
 import L from 'leaflet'
 import { latLng } from "leaflet"
 import { LMap, LTileLayer, LMarker } from "vue2-leaflet"
-
+import Items from '../services/item'
 
 export default {
   name: 'CreatePoint',
@@ -134,7 +114,8 @@ export default {
       mapOptions: {
         zoomSnap: 0.5
       },
-      showMap: true
+      showMap: true,
+      items: null
     };
   },
   components: {
@@ -155,10 +136,6 @@ export default {
     }
   },
   mounted() {
-    this.$nextTick(() => {
-      this.$refs.myMap.mapObject.ANY_LEAFLET_MAP_METHOD()
-    });
-
     delete L.Icon.Default.prototype._getIconUrl
 
     L.Icon.Default.mergeOptions({
@@ -166,6 +143,14 @@ export default {
       iconUrl: require('leaflet/dist/images/marker-icon.png'),
       shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
     })
+
+    Items.listar()
+      .then(res => {
+        this.items = res.data
+        console.log(this.items)
+      }).catch(e => {
+        console.log(e)
+      })
   },
 }
 </script>
