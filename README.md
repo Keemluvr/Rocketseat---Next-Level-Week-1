@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=170px height=40px src="https://github.com/Keemluvr/ecoleta/blob/master/web-react/src/assets/Logo.png" alt="Project logo"></a>
+ <img width=170px height=40px src="https://github.com/Keemluvr/ecoleta/blob/master/front-end-react/src/assets/logo.svg" alt="Project logo"></a>
 </p>
 
 <p align="center">
