@@ -60,6 +60,9 @@
                             <label for="uf">Estado (uf)</label>
                             <select name="uf" id="uf">
                                 <option value="0">Selecione uma UF</option>
+                                <option v-for="uf in ufs" :value="uf" :key="uf">
+                                  {{ uf }}
+                                </option>
                             </select>
                         </div>
                         <div class="field">
@@ -97,6 +100,7 @@ import L from 'leaflet'
 import { latLng } from "leaflet"
 import { LMap, LTileLayer, LMarker } from "vue2-leaflet"
 import Items from '../services/item'
+import ibgeApi from '../services/ibge'
 
 export default {
   name: 'CreatePoint',
@@ -115,7 +119,8 @@ export default {
         zoomSnap: 0.5
       },
       showMap: true,
-      items: null
+      items: null,
+      ufs: []
     };
   },
   components: {
@@ -133,6 +138,19 @@ export default {
     },
     innerClick() {
       alert("Click!")
+    },
+    setUF() {
+      ibgeApi.selectedUf().then((res) => {
+        this.ufs = res.data.map( uf => uf.sigla )
+      });
+    },
+    showItems() {
+      Items.listar()
+      .then(res => {
+        this.items = res.data
+      }).catch(e => {
+        console.log(e, 'erro')
+      })
     }
   },
   mounted() {
@@ -144,14 +162,10 @@ export default {
       shadowUrl: require('leaflet/dist/images/marker-shadow.png'),
     })
 
-    Items.listar()
-      .then(res => {
-        this.items = res.data
-        console.log(this.items)
-      }).catch(e => {
-        console.log(e)
-      })
+    this.showItems()
+    this.setUF()
   },
+
 }
 </script>
 
