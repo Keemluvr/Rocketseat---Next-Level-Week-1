@@ -12,6 +12,9 @@
   </a>
 </p>
 
+![screenshot Video Lessons](https://i.imgur.com/Se30MI7.png)
+
+
 ## 📝 About <a name = "about"></a>
 
 Ecoleta aims to connect companies or entities that collect waste to people who need to dispose of this waste.
