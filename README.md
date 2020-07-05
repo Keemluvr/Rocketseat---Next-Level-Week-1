@@ -3,6 +3,7 @@
  <img width=170px height=40px src="https://github.com/Keemluvr/ecoleta/blob/master/front-end-react/src/assets/logo.svg" alt="Project logo"></a>
 </p>
 
+
 <p align="center">
   <a href="https://rocketseat.com.br">
     <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%237519C1">
@@ -10,7 +11,10 @@
   <a href="https://rocketseat.com.br">
     <img alt="Made by Rocketseat" src="https://img.shields.io/badge/NLW-1.0-blueviolet">
   </a>
-</p>
+</p> 
+
+![screenshot Video Lessons](https://i.imgur.com/Se30MI7.png)
+
 
 ## 📝 About <a name = "about"></a>
 
