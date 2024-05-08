@@ -1,53 +1,57 @@
-<p align="center">
-  <a href="" rel="noopener">
- <img width=170px height=40px src="https://github.com/Keemluvr/ecoleta/blob/master/front-end-react/src/assets/logo.svg" alt="Project logo"></a>
-</p>
+# Ecoleta
 
+![GIF do projeto](https://github.com/Keemluvr/ecoleta/blob/master/demo.gif)
 
-<p align="center">
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d8e232ff-8521-401c-8857-dddb990b505d/deploy-status)](https://app.netlify.com/sites/ecoleta-keemluvr/deploys)
   <a href="https://rocketseat.com.br">
     <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%237519C1">
   </a>
   <a href="https://rocketseat.com.br">
     <img alt="Made by Rocketseat" src="https://img.shields.io/badge/NLW-1.0-blueviolet">
   </a>
-</p> 
 
-![screenshot Video Lessons](https://i.imgur.com/Se30MI7.png)
+## Sobre este projeto
 
+  Esse projeto foi realizado durante a Next Level Week 1.0 da [RocketSeat](https://www.rocketseat.com.br/), o objetivo foi construir uma aplicação em React JS do zero, tendo assim o desenvolvimento do backend, frontend e mobile, onde visa conectar entidades que recolhem resíduos a pessoas que necessitam eliminar esses resíduos.
 
-## 📝 About <a name = "about"></a>
+## Visualizar <a name = "deployment"></a>
 
-Ecoleta aims to connect companies or entities that collect waste to people who need to dispose of this waste.
+| 🖥 Protótipo                                                                                         | 💻 Frontend                                | 🗃 Backend                                       |
+| --------------------------------------------------------------------------------------------------- | ------------------------------------------ | ----------------------------------------------- |
+| Figma | [Netlify](ecoleta-keemluvr.netlify.app) | Render |
 
 ## 🏁 Installing <a name = "getting_started"></a>
 
-download the project
+1. Clone o projeto
 ```
 git clone https://github.com/Keemluvr/ecoleta.git
 ```
 
-install the back-end and front-end dependencies
+2. Instale as dependências no backend e no frontend
 ```
 npm install
 ```
 
-Run the backend and frontend
+3. Exceute o backend e o frontend
 ```
 npm start
 ```
 
-## 🚀 Preview <a name = "deployment"></a>
+## Desenvolvimento
 
-🖥 Prototype                       | 💻 Frontend                           | 🗃 Backend
----------------------------------- | -------------------------------------- | -----------------------------------------
-[Figma](https://www.figma.com/file/1SxgOMojOB2zYT0Mdk28lB/Ecoleta?node-id=136%3A548)   | [Netlify - em progresso](#)     | [Heroku - em progresso](#)
+Para o desenvolvimento foi necessário:
 
+- Utilizar a biblioteca React JS e Vue JS
+- Utilizar o Celebrate para validação dos endpoints
+- Utilizar o React Router para o roteamento das páginas
+- Utilizar o Expo para o desenvolvimento do app
+- Utilizar o Leaflet para mostrar o mapa
+  
 ## ⛏️ Built using <a name = "built_using"></a>
 
 🗃 Backend                            | 💻 Frontend                               | 📱 Mobile
 ------------------------------------- | -------------------------------------- | -----------------------------------------
 [NodeJs](https://nodejs.org/en/)      | [React](https://pt-br.reactjs.org)     | [React Native](https://reactnative.dev)
-[Express](https://expressjs.com/)     |                                        | [Expo](https://expo.io)
+[Express](https://expressjs.com/)     | [Vue.js](https://vuejs.org/)           | [Expo](https://expo.io)
 [TypeScript](https://www.typescriptlang.org)|                                  | [Axios](https://github.com/axios/axios)
    
